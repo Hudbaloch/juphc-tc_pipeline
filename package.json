@@ -1,0 +1,24 @@
+{
+  "name": "tax-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hudbaloch/tax-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hudbaloch/tax-calculator/issues"
+  },
+  "homepage": "https://github.com/Hudbaloch/tax-calculator#readme",
+  "devDependencies": {
+    "jasmine": "^7.0.0"
+  }
+}

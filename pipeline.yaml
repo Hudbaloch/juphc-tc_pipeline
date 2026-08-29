@@ -5,6 +5,7 @@ metadata:
 spec:
   workspaces:
     - name: shared-workspace
+
   tasks:
     - name: npminstall
       taskRef:

@@ -1,7 +1,7 @@
-apiVersion: tekton.dev/v1
+apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: tax-calculator-pipeline-run
+  generateName: tax-calculator-run-
 spec:
   pipelineRef:
     name: tax-calculator-pipeline

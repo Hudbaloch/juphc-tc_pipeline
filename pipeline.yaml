@@ -1,8 +1,7 @@
-apiVersion: tekton.dev/v1
+apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: tax-calculator-pipeline
-
 spec:
   workspaces:
     - name: shared-workspace
@@ -15,24 +14,24 @@ spec:
     - name: npminstall
       taskRef:
         name: npm
-      workspaces:
-        - name: source
-          workspace: shared-workspace
       params:
         - name: repo-url
           value: $(params.repo-url)
+      workspaces:
+        - name: source
+          workspace: shared-workspace
 
     - name: tests
       runAfter:
         - npminstall
       taskRef:
         name: jasmine
-      workspaces:
-        - name: source
-          workspace: shared-workspace
       params:
         - name: repo-url
           value: $(params.repo-url)
+      workspaces:
+        - name: source
+          workspace: shared-workspace
 
     - name: build
       runAfter:
